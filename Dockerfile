@@ -1,9 +1,9 @@
-FROM panospetr/llama3.1-8b:latest AS model
+#FROM panospetr/llama3.1-8b:latest AS model
 FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY --from=model /models/llama3-8b /app/local_model
+#COPY --from=model /models/llama3-8b /app/local_model
 
 RUN apt-get update && apt-get install -y git
 
