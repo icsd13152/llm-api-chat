@@ -10,8 +10,8 @@ MODEL_PATH = "./local_model"
 app = FastAPI()
 
 # Load model and tokenizer on startup
-tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-model = AutoModelForCausalLM.from_pretrained(MODEL_PATH, torch_dtype=torch.float32)
+tokenizer = AutoTokenizer.from_pretrained("ilsp/Meltemi-7B-v1")
+model = AutoModelForCausalLM.from_pretrained("ilsp/Meltemi-7B-v1", torch_dtype=torch.float32)
 model.to(device)
 
 class ChatRequest(BaseModel):
